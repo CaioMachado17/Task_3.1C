@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.res.ColorStateList;  // ✅ Added for tinting
+import android.content.res.ColorStateList;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +31,7 @@ public class QuizActivity extends AppCompatActivity {
 
     private String userName;
 
-    private Drawable defaultButtonBackground;  // ✅ Store default background
+    private Drawable defaultButtonBackground;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +48,6 @@ public class QuizActivity extends AppCompatActivity {
         buttonNext = findViewById(R.id.buttonNext);
         progressBar = findViewById(R.id.progressBar);
 
-        // ✅ Capture the default button background
         defaultButtonBackground = optionButtons[0].getBackground();
 
         userName = getIntent().getStringExtra("userName");
@@ -150,7 +149,7 @@ public class QuizActivity extends AppCompatActivity {
 
     private void resetOptions() {
         for (Button btn : optionButtons) {
-            btn.setBackgroundTintList(null);  // ✅ Clear any applied tint
+            btn.setBackgroundTintList(null);
             btn.setEnabled(true);
         }
     }

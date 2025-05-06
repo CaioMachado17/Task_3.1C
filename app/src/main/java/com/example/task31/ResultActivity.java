@@ -26,7 +26,6 @@ public class ResultActivity extends AppCompatActivity {
         int score = getIntent().getIntExtra("score", 0);
         int total = getIntent().getIntExtra("total", 0);
 
-        // ✅ Set message based on score
         if (score >= 4) {
             textViewCongrats.setText("Congratulations, " + userName + "!");
         } else {
